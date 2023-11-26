@@ -1,11 +1,9 @@
-const iconoBurger=document.getElementById('icono-hamburguesa');
-const menu=document.getElementById('menu');
+let iconoBurger=document.querySelector('#icono-hamburguesa');
+let menu=document.querySelector('#menu');
 
 
 iconoBurger.addEventListener('click', ()=>{
     menu.classList.toggle('translate-y-[0]')
-    menu.classList.toggle('sm:translate-y-[0]')   
-
 }
 );
 
