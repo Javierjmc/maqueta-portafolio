@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo-javier.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Maqueta-portafolio</title>
 
@@ -16,7 +17,12 @@
         }
         @media screen and (min-width: 640px) {
             #diagonal-izq-habilidades{
-                clip-path: polygon(0% 0%, 40% 0%, 34% 100%, 0% 100%)
+                clip-path: polygon(0% 0%, 20% 0%, 13% 100%, 0% 100%)
+             }
+        }
+        @media screen and (min-width: 640px) {
+            #diagonal-izq-proyectos{
+                clip-path: polygon(0% 0%, 30% 0%, 23% 100%, 0% 100%)
              }
         }
         @media screen and (min-width: 1024px) {
@@ -36,31 +42,35 @@
 </head>
 
 
-<body class="text-black">
+<body class="text-white">
 
     <!-- Menu de navegación incluye lista de navegacion y icono de haburguesa -->
     <nav class="">
+        <div class="absolute z-30 top-1 left-1 md:left-[93%]">
+            <img src="./img/logo-javier.png" alt="logo-javier" class="w-16 h-16">
+        </div>
         <!-- Icono de hamburguesa -->
         <div id="icono-hamburguesa" class="fixed z-40 md:hidden top-1 right-1 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white sm:text-black active:text-[#20A39E]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-white active:text-yellow-700">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
         </div>
 
         <!-- Lista de navegacion -->
-        <ul id="menu" class="flex flex-col items-center w-full bg-[#EF5B5B] opacity-90 duration-[0.4s] translate-y-[-100%] fixed z-30 md:hidden text-xl">
-                   
-            <li class="pt-[3em] active:text-[#20A39E] opacity-100 font-bold">
-                <a href="#">INICIO</a>
-            </li>
-            <li class="py-[1em] active:text-[#20A39E] opacity-100 font-bold">
-                <a href="#">PORTAFOLIO</a>
-            </li>
-            <li class="pb-[3em] active:text-[#20A39E] opacity-100 font-bold">
-                <a href="#">CONTACTO</a>
-            </li>
+        <div >
+            <ul id="menu" class="flex flex-col items-center w-full bg-yellow-600 opacity-90 duration-[0.4s] translate-y-[-100%] fixed z-30 md:hidden text-xl">
+                <li class="pt-[3em] active:text-blue-700 opacity-100 font-bold">
+                    <a href="#">INICIO</a>
+                </li>
+                <li class="py-[1em] active:text-blue-700 opacity-100 font-bold">
+                    <a href="#">PORTAFOLIO</a>
+                </li>
+                <li class="pb-[3em] active:text-blue-700 opacity-100 font-bold">
+                    <a href="#">CONTACTO</a>
+                </li>
+            </ul>
 
-        </ul>
+        </div>
 
         
           
@@ -74,10 +84,17 @@
         <Section class="">
 
             <!-- Caja izquierda -->
-            <div id="diagonal-izq" class="bg-[#23001E] p-6 h-96 sm:h-[550px] flex justify-center items-center sm:justify-start sm:absolute sm:z-10 sm:w-full">
-                <img id="imgen-perfil" src="/img/franela-roja.jpeg" alt="Javierjmc" class="rounded-full w-64 h-64  border-4">
+            <div id="diagonal-izq" class="bg-black p-6 h-96 sm:h-[550px] flex justify-center items-center sm:justify-start sm:absolute sm:z-10 sm:w-full">
+                <div class="flex flex-col items-center">
+                    <img id="imgen-perfil" src="./img/franela-roja.jpeg" alt="Javierjmc" class="rounded-full w-64 h-64  border-4 mb-4">
+                    <label id="fondo" class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value=""  class="sr-only peer" />
+                        <div class="w-7 h-4 bg-yellow-700 peer-focus:outline-none peer-focus:ring-0 dark:peer-focus:ring-[#1ed760] rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-black after:content-[''] after:absolute after:top-[4px] after:left-[2px] after:bg-[#121212] after:border-black after:border after:rounded-full after:h-3 after:w-3 after:transition-all dark:border-black peer-checked:bg-blue-300"></div>
+                        <span id="textoModo" class="block ml-4 text-sm font-medium text-white">Modo dia</span>
+                    </label>
+                </div>
                                 
-                <button id="diagonal-botones" class="bg-[#FFBA49] border-4 border-white active:border-[#20A39E] p-4 lg:px-8 text-xl text-white font-semibold ml-4 xl:ml-32 rounded-full lg:rounded-none hidden md:flex">
+                <button id="diagonal-botones" class="bg-yellow-700 border-4 border-white active:border-yellow-300 p-4 lg:px-8 text-xl text-white active:text-yellow-300 font-semibold ml-4 xl:ml-32 rounded-full lg:rounded-none hidden md:flex">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                     </svg>
@@ -86,10 +103,10 @@
             </div>
             
             <!-- Caja derecha -->
-            <div class="bg-[#FFBA49] p-6 sm:h-[550px] sm:w-full sm:flex sm:flex-col sm:items-end sm:justify-end">
+            <div class="bg-gray-900 p-6 sm:h-[550px] sm:w-full sm:flex sm:flex-col sm:items-end sm:justify-end">
 
                 <div class="flex items-center">
-                    <button id="diagonal-botones" class="bg-[#23001E] border-4 active:border-[#20A39E] p-4 lg:px-8 text-xl text-white font-semibold mr-4 xl:mr-32 rounded-full lg:rounded-none hidden md:flex">
+                    <button id="diagonal-botones" class="bg-yellow-700 border-4 active:border-yellow-300 p-4 lg:px-8 text-xl text-white active:text-yellow-300 font-semibold mr-4 xl:mr-32 rounded-full lg:rounded-none hidden md:flex">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
                           </svg>
@@ -98,9 +115,9 @@
                     </button>
 
                     <!-- Caja de texto acerca de mi -->
-                    <div>
-                        <h1 id="titulo" class="text-2xl font-semibold mb-2 sm:w-72">Javier Martínez</h1>
-                        <p class="text-lg font-semibold sm:w-72  text-lack">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eos nam doloribus molestiae, officiis perferendis unde, quod minus error id temporibus deserunt mollitia, fugiat vero vel aliquam inventore dignissimos autem.</p>
+                    <div class="text-center sm:text-right">
+                        <h1 id="titulo" class="text-3xl font-semibold text-yellow-300 mb-2 sm:w-72 ">Javier Martínez</h1>
+                        <p class="text-lg font-semibold  sm:w-72 italic">Aprendiz de desarrollador Front-end en constante proceso de formación. Me gusta crear sitios web eficientes y adaptables a cualquier resolución.</p>
                     </div>
 
                 </div>
@@ -111,26 +128,65 @@
 
         <Section class="">
             <!-- Caja izquierda -->
-            <div id="diagonal-izq-habilidades" class="bg-[#23001E] sm:bg-[#FFBA49] p-6 h-16 sm:h-40 flex justify-center items-center sm:justify-start sm:absolute sm:z-10 sm:w-full">
-                <div class="text-2xl text-white sm:text-black font-semibold">
-                    Habilidades
+            <div id="diagonal-izq-habilidades" class="bg-black sm:bg-gray-900 p-6 h-16 sm:h-48 flex justify-center items-center sm:justify-start sm:absolute sm:z-10 sm:w-full">
+                <div class="text-3xl text-yellow-300 font-semibold">
+                    Skills
                 </div>
                              
             </div>
             
             <!-- Caja derecha -->
-            <div class="bg-[#FFBA49] sm:bg-[#23001E] p-6 sm:h-40 sm:w-full sm:flex sm:flex-col sm:items-end sm:justify-end">
-
+            <div class="bg-gray-900 sm:bg-black p-6 h-auto sm:h-48 sm:w-full flex justify-around sm:pl-36 md:pl-48 lg:pl-60 items-center flex-wrap gap-3">
                 
-
-                </div>
+                <img src="./img/html.png" alt="html" class="w-[80px] h-[70px]">
+                <img src="./img/CSS.png" alt="css" class="w-[80px] h-[70px]">
+                <img src="./img/javascript-logo-4.png" alt="javascript" class="w-[60px] h-[67px]">
+                <img src="./img/Tailwind-Logo.png" alt="tailwind" class="w-[80px] h-[67px]">
+                <img src="./img/react.png" alt="react" class="w-[70px] h-[70px]">
+               <img src="./img/python.png" alt="python" class="w-[70px] h-[70px]">
+               <img src="./img/c++.png" alt="git" class="w-[70px] h-[70px]">
+                <img src="/img/git-logo.png" alt="git" class="w-[70px] h-[70px]">
+                <img src="./img/githubmejor.png" alt="github" class="w-[70px] h-[70px] invert">
+                
 
             </div>
            
 
         </Section>
+            <!-- Caja izquierda -->
+            <div id="diagonal-izq-proyectos" class="bg-black sm:bg-gray-900 p-6 h-16 sm:h-48 flex justify-center items-center sm:justify-start sm:absolute sm:z-10 sm:w-full">
+                <div class="text-3xl text-yellow-300 font-semibold">
+                    Proyectos
+                </div>
+                                     
+            </div>
+                    
+            <!-- Caja derecha -->
+            <div class="bg-gray-900 sm:bg-black p-6 h-auto sm:h-48 sm:w-full flex justify-around sm:pl-60 md:pl-72 items-center flex-wrap gap-3">
+                <a href="#">
+                    <div class="flex flex-col items-center">
+                        <img src="./img/sitio-web.png" alt="html" class="w-[100px] h-[100px]">
+                        <span>Descripción</span>
+                    </div> 
+                </a> 
+                <a href="#">
+                    <div class="flex flex-col items-center">
+                        <img src="./img/sitio-web.png" alt="html" class="w-[100px] h-[100px]">
+                        <span>Descripción</span>
+                    </div> 
+                </a> 
+                <a href="#">
+                    <div class="flex flex-col items-center">
+                        <img src="./img/sitio-web.png" alt="html" class="w-[100px] h-[100px]">
+                        <span>Descripción</span>
+                    </div> 
+                </a> 
+                            
+            </div>
         
-        <section>Proyectos</section>
+        <section>
+
+        </section>
         <section>Contacto</section>
     </main>
     <footer>redes</footer>
